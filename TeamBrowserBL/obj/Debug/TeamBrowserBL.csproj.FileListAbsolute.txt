@@ -1,0 +1,7 @@
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\bin\Debug\TeamBrowser.dll.config
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\bin\Debug\TeamBrowser.dll
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\bin\Debug\TeamBrowser.pdb
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\obj\Debug\TeamBrowserBL.csproj.AssemblyReference.cache
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\obj\Debug\TeamBrowserBL.csproj.CoreCompileInputs.cache
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\obj\Debug\TeamBrowser.dll
+D:\Laboral\Projects\TeamBrowser\TeamBrowserBL\obj\Debug\TeamBrowser.pdb

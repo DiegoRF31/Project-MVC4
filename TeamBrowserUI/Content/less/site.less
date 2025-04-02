@@ -1,0 +1,424 @@
+﻿@import 'utils.less';
+
+//Structure
+main {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1300px;
+    min-width: 800px;
+    margin-top: 50px;
+}
+
+article {
+    margin: 60px 10px;
+}
+
+#site-nav {
+    padding: 10px;
+
+    ul {
+        .clear;
+
+        li {
+            float: left;
+            font-size: 1em;
+
+            a {
+                color: @black;
+
+                &:hover {
+                    color: @mode;
+                }
+            }
+
+
+            &.toggle-modes {
+                float: right;
+
+                &.user {
+                    a {
+                        .awesome-icon('\f007');
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    .awesome-icon('\f085');
+                }
+            }
+        }
+    }
+}
+
+//Layout
+body {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 1.6em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+footer {
+    font-size: 0.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.public-team-list {
+    section {
+        padding: 15px;
+        border: 1px solid @panel-border;
+        border-radius: 30px;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &:hover {
+            color: @white;
+            background: @black;
+        }
+
+        figure {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            vertical-align: middle;
+
+            img {
+                border-radius: 15px;
+                height: 100%;
+            }
+        }
+
+        h3 {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+            font-size: 1.5em;
+        }
+    }
+}
+
+.public-team-details {
+    header {
+        margin-bottom: 60px;
+        position: relative;
+        .clear;
+
+        a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            .awesome-icon('\f112');
+        }
+
+        figure {
+            height: 200px;
+            width: 200px;
+            float: left;
+
+            img {
+                border-radius: 15px;
+                height: 100%;
+            }
+        }
+
+        h1 {
+            margin: 90px 30px 0;
+            float: left;
+        }
+    }
+
+    .roster {
+        text-align: right;
+
+        .headers {
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            display: inline-block;
+            margin: 0 2%;
+            width: 8%;
+            text-align: center;
+        }
+
+        .player {
+            padding: 10px 0;
+            background: @black;
+            color: @white;
+            border-radius: 13px;
+            margin-bottom: 5px;
+            .clear;
+
+            figure {
+                width: 50px;
+                margin: 2px 0 0 10px;
+                float: left;
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            p {
+                margin-top: 15px;
+            }
+
+            .name {
+                float: left;
+                margin-left: 8%;
+                width: auto;
+            }
+        }
+    }
+}
+
+
+.admin-grid {
+    width: 100%;
+    table-layout: fixed;
+
+    tr {
+        height: 45px;
+        cursor: pointer;
+
+        &:nth-child(even) {
+            background: @grid-even;
+        }
+
+        &.active {
+            table {
+                .info > td:last-child {
+                    .awesome-icon('\f077');
+                }
+            }
+        }
+    }
+
+    th {
+        text-align: center;
+        background: @black;
+        color: @white;
+        vertical-align: middle;
+        width: 33%;
+    }
+    
+    td{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    tbody {
+        table {
+            width: 100%;
+            table-layout: fixed;
+
+            .info > td {
+                text-align: center;
+                vertical-align: middle;
+
+                &:first-child {
+                    text-align: left;
+                    padding-left: 5%;
+                }
+
+                &:last-child {
+                    position: relative;
+                    .awesome-icon('\f078');
+
+                    &:after {
+                        position: absolute;
+                        right: 10px;
+                        top: 8px;
+                    }
+                }
+            }
+
+            .change-image.editting:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        div {
+            background: @white;
+            width: 80%;
+            margin: 20px 0 20px 18%;
+            box-sizing: border-box;
+            padding: 1%;
+            border-radius: 10px;
+            border: 1px outset @panel-border;
+            font-size: 0.7em;
+            cursor: default;
+
+            tr {
+                height: 35px;
+                cursor: default;
+            }
+
+            th{
+                width: 10%;
+                white-space: normal;
+
+                &:first-child{
+                    width: 25%;
+                }
+
+                &:last-child{
+                    width: 15%;
+                }
+            }
+
+            tbody td {
+                text-align: center;
+
+                &:first-child {
+                    text-align: left;
+                    padding-left: 5%;
+                }
+            }
+
+            img {
+                height: 25px;
+                width: 25px;
+            }
+
+            input{
+                width: 55%;
+                text-align: center;
+                padding: 0;
+
+                &.player{
+                    width: 80%;
+                    text-align: left;
+                    padding: 0 5px;
+                }
+            }
+
+            tfoot td {
+                text-align: right;
+                height: 100%;
+            }
+
+            button{
+                &.add {
+                    top: 5px;
+                }
+            }
+        }
+    }
+
+    input {
+        height: 75%;
+        font-size: 0.8em;
+    }
+
+    img {
+        height: 35px;
+        width: 35px;
+        border-radius: 5px;
+        vertical-align: middle;
+    }
+
+    tfoot {
+
+        tr{
+            cursor: default;
+        }
+
+        td {
+            text-align: right;
+        }
+    }
+
+    button {
+        background: none;
+        border: 0;
+        font-size: 1.1em;
+        cursor: pointer;
+
+        &.edit {
+            .awesome-icon('\f044');
+            color: @edit;
+
+            &:after {
+                position: relative;
+                top: 1.5px;
+            }
+        }
+
+        &.delete {
+            color: @delete;
+            .awesome-icon('\f014');
+        }
+
+        &.cancel {
+            color: @delete;
+            .awesome-icon('\f05e');
+        }
+
+        &.save {
+            color: @save;
+            .awesome-icon('\f0c7');
+        }
+
+        &.add {
+            color: @add;
+            .awesome-icon('\f067');
+            position: relative;
+            top: 10px;
+            right: 3px;
+        }
+    }
+}
+
+.error-page {
+    text-align: center;
+    background: @panel-border;
+    padding: 30px;
+    border-radius: 20px;
+
+    h1 {
+        margin: 0;
+    }
+
+    h3 {
+        margin-bottom: 60px;
+    }
+
+    a {
+        color: @save;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        text-align: left;
+        padding: 10px;
+        background: @error-page-panel;
+        color: @error-page-panel-text;
+        border-radius: 8px;
+        font-size: 0.5em;
+    }
+}
+
+
+//Removes the highlight when clicking an element several times
+.no-selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+//Invisible file control
+#file-upload {
+    opacity: 0;
+}
